@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
 const morgan = require("morgan");
 let notes = [
   {
@@ -20,7 +19,6 @@ let notes = [
   },
 ];
 
-app.use(cors());
 app.use(express.static("dist"));
 app.use(morgan("dev"));
 app.use(express.json());
